@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
 <style>
 * {box-sizing: border-box;}
 
@@ -36,16 +37,19 @@ body {
   color: white;
 }
 
-.search-container {
-  border-color: black;
+.topnav .search-container {
+  float: right;
 }
 
- input[type=text] {
+.topnav input[type=text] {
   padding: 6px;
   margin-top: 8px;
   font-size: 17px;
+  border: none;
 }
-.search-container button {
+
+.topnav .search-container button {
+  float: right;
   padding: 6px 10px;
   margin-top: 8px;
   margin-right: 16px;
@@ -55,7 +59,7 @@ body {
   cursor: pointer;
 }
 
-.search-container button:hover {
+.topnav .search-container button:hover {
   background: #ccc;
 }
 
@@ -63,7 +67,7 @@ body {
   .topnav .search-container {
     float: none;
   }
-  .topnav a, .search-container input[type=text], .search-container button {
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
     float: none;
     display: block;
     text-align: left;
@@ -71,9 +75,61 @@ body {
     margin: 0;
     padding: 14px;
   }
- .search-container input[type=text] {
+  .topnav input[type=text] {
     border: 1px solid #ccc;  
   }
+}
+
+
+
+
+.panel-footer section{
+  margin-bottom: 30px;
+  text-align: center;
+}
+.panel-footer hr{
+  width: 50%;
+}
+}
+
+.quotes i{
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+}
+
+  
+.dropdown-menu-center {
+  left: 50% !important;
+  right: auto !important;
+  text-align: center !important;
+  transform: translate(-50%, 0) !important;
+}
+
+#hours span{
+  font-size: 20px;
+}
+#hours, #cont,#Address{
+  text-align: center;
+  color: white;
+  line-height: 2;
+}
+#symbol{
+  font-size: 35px;
+  color: blue;
+}
+#cont a{
+text-decoration: none;
+color: white;
+}
+
+.jumbotron{
+  background-image: url("css/library.PNG");
+}
+body{
+  background-color: black;
+}
+
 
 </style>
 </head>
@@ -83,21 +139,95 @@ body {
   <a class="active" href="#home">Home</a>
   <a href="#about">About</a>
   <a href="#contact">Contact</a>
-</div>
-<br><br><br><br>
-<div class="container">
- <div class="search-container">
-  <br><br><br><br>
-   <center> 
-    <form action="NewFile.jsp">
+  <div class="search-container">
+    <form action="/action_page.php">
       <input type="text" placeholder="Search.." name="search">
       <button type="submit"><i class="fa fa-search"></i></button>
     </form>
-  </center>
-  <br><br><br><br>
   </div>
 </div>
+
+
+
+<div class="jumbotron"><br><br><br><br>
+     <div class="quotes" style="font-size: 20px;color: white;">
+     <center> <i>Whenever you read a good book, somewhere in the world a door opens to allow in more light.</i></center>
+     </div><br><br>
+
+<div>
+
+
+
+
+
+  <div class="dropdown text-center">
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">&nbsp&nbsp&nbsp&nbspCATOGERIES&nbsp&nbsp
+    <span class="caret"></span>&nbsp&nbsp</button>
+    <ul class="dropdown-menu dropdown-menu-center">
+      <li><a href="#">Computer Science</a></li>
+      <li><a href="#">Math</a></li>
+      <li><a href="#">Science</a></li>
+      <li><a href="#">Aptitude</a></li>
+      <li><a href="#">English</a></li>
+     <!--  <li class="divider"></li>
+      <li><a href="#">About Us</a></li> -->
+    </ul>
+  </div>
+</div>
+
+
+<br><br><br><br><br><br>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="panel-footer" style="background-color: black;">
+  <div class="container">
+    <div class="row"><br>
+      <section id="hours" class="col-sm-4">
+      <span style="font-size: 24px;">Contact</span><br>
+        <a href="tel:7373855129">7373855129</a><br>
+        
+      </section>
+      <section id="Address" class="col-sm-4">
+         <span class="glyphicon glyphicon-envelope" style="font-size: 27px"></span><br>
+        <span style="font-size: 24px;">MAIL</span><br>
+        elakiyabaskaran21@gmail.com <br>
+        
+        
+      </section> 
+
+      <section id="cont" class="col-sm-4" >
+        
+        <div id="socialmedia">
+    <a href="https://www.instagram.com/damn_bad_nd_cute/?igshid=14b1n8tjupdxj
+"><i class="fa fa-instagram" style="font-size:30px"></i></a>&nbsp
+    &nbsp&nbsp&nbsp&nbsp<a href="https://www.linkedin.com/in/elakiya-baskaran-a91b1a199"><i class="fa fa-linkedin-square" style="font-size:30px"></i></a>&nbsp&nbsp&nbsp&nbsp&nbsp
+    <a href="https://www.facebook.com/elakiya.baskaran"> <i  class="fa fa-facebook" style="font-size:29px"></i></a>&nbsp&nbsp&nbsp&nbsp&nbsp
+  </div>
+
+      </section>
+
+    </div>
+    
+  </div>
+</footer>
 <script src="js/jQuery.js"></script>
 <script src="js/bootstrap.min.js"></script>
+
 </body>
 </html>
